@@ -4,6 +4,6 @@ This project is based on predicting if a customer will default on a requested lo
 
 ### Command to run the deployed app in docker container
 
-        docker build -t loan-defaulter:1.0 . -f Dockerfile
+        docker build -f Dockerfile -t loan-defaulter:1.0 .
 
         docker run -p 8501:8501 --name streamlit_app loan-defaulter:1.0
