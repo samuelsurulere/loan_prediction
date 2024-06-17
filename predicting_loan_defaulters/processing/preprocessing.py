@@ -21,7 +21,6 @@ class DropColumns(BaseEstimator, TransformerMixin):
         X = X.drop(columns=self.variables_to_drop, axis=1)
         return X
 
-
 class LabelEncoder(BaseEstimator, TransformerMixin):
     def __init__(self, variables=None):
         self.variables = variables

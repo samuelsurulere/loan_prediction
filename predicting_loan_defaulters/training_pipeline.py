@@ -12,13 +12,13 @@ import predicting_loan_defaulters.pipeline as pipe
 def run_training():
     data = load_dataset(file_name=config.TRAIN_DATA)
     print('[INFO] Dataset loaded successfully')
-    X_train = data.drop(config.TARGET, axis=1)
-    y_train = data[config.TARGET].map({'No': 0, 'Yes': 1})
+    X_train = data[config.MODEL_FEATURES]
+    y_train = data[config.TARGET]
     print('[INFO] The dataset has been split into features and target variable successfully')
-    pipe.classification_pipeline.fit(X_train[config.MODEL_FEATURES], y_train)
-    print('[INFO] Model training currently in progress, please be patient.')
+    pipe.classification_pipeline.fit(X_train, y_train)
+    print('[INFO] Model training currently in progress, please be patient')
     saved_model_pipeline(pipeline_to_save_model=pipe.classification_pipeline)
-    print(f'[INFO] Model training completed successfully. Model saved as {config.MODEL_NAME}.')
+    print(f'[INFO] Model training completed successfully. Model saved as {config.MODEL_NAME}')
 
 
 if __name__ == '__main__':

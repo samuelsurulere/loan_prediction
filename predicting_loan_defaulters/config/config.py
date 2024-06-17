@@ -12,7 +12,7 @@ TEST_DATA = 'test_data.csv'
 MODEL_NAME = 'predict_loan_defaulters.pkl'
 SAVE_MODEL_PATH = os.path.join(PACKAGE_ROOT, "saved_models")
 
-TARGET = 'Default'
+TARGET = ['Default']
 
 MODEL_FEATURES = [
     'Age', 'Income', 'LoanAmount', 'CreditScore', 'MonthsEmployed', 
