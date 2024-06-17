@@ -1,0 +1,27 @@
+# Base image
+FROM python:3.8-slim-buster
+
+# Updating the package list
+RUN pip install --upgrade pip
+
+# Copying all the files to the source directory
+COPY . /loan_default_prediction
+
+# Setting the working directory
+WORKDIR /loan_default_prediction
+
+# Installing the dependencies
+RUN pip install -r requirements.txt
+
+# Giving the permissions to the python file
+RUN chmod +x app.py
+
+# Run the python file
+# CMD ["python", "app.py"]
+
+# Exposing the port that Streamlit runs on
+EXPOSE 8501
+
+# Run the Streamlit app
+CMD ["streamlit", "run", "app.py"]
+

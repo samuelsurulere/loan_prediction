@@ -1,0 +1,9 @@
+# Don't commit .env file. Use .env.local as a template and then set your env vars for your local only so that
+# credentials do not get committed to github.
+
+.pytest_cache
+predicting_loan_defaulters/dataset/loan_default.csv
+predicting_loan_defaulters/__pycache__
+predicting_loan_defaulters/config/__pycache__
+predicting_loan_defaulters/processing/__pycache__
+tests/__pycache__

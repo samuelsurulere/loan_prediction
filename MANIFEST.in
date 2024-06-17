@@ -1,0 +1,22 @@
+include *.txt
+include *.md
+include *.py
+
+recursive-include ./predicting_loan_defaulters/*
+
+include predicting_loan_defaulters/dataset/train_data.csv
+include predicting_loan_defaulters/dataset/test_data.csv
+include predicting_loan_defaulters/saved_models/*.pkl
+include predicting_loan_defaulters/processing/*.py
+
+include ./tests/*
+
+recursive-exclude ./predicting_loan_defaulters/__pycache__
+recursive-exclude ./predicting_loan_defaulters/config/__pycache__
+recursive-exclude ./predicting_loan_defaulters/processing/__pycache__
+recursive-exclude ./tests/__pycache__
+recursive-exclude * *.py[co]
+
+exclude ./predicting_loan_defaulters/dataset/loan_default.csv
+exclude .pytest_cache
+exclude ./mlruns
