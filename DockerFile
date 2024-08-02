@@ -27,3 +27,4 @@ ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.addres
 # Run the Streamlit app
 CMD ["app.py"]
 
+# https://medium.com/@ishaterdal/deploying-a-streamlit-app-with-docker-db40a8dec84f for pushing and deploying the docker image to Docker Hub

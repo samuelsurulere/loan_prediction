@@ -6,13 +6,13 @@ PACKAGE_ROOT = pathlib.Path(predicting_loan_defaulters.__file__).resolve().paren
 
 DATAPATH = os.path.join(PACKAGE_ROOT, "dataset")
 
-TRAIN_DATA = 'train_data.csv'
-TEST_DATA = 'test_data.csv'
+TRAIN_DATA = "train_data.csv"
+TEST_DATA = "test_data.csv"
 
-MODEL_NAME = 'predict_loan_defaulters.pkl'
+MODEL_NAME = "predict_loan_defaulters.pkl"
 SAVE_MODEL_PATH = os.path.join(PACKAGE_ROOT, "saved_models")
 
-TARGET = ['Default']
+TARGET = "Default"
 
 MODEL_FEATURES = [
     'Age', 'Income', 'LoanAmount', 'CreditScore', 'MonthsEmployed', 
@@ -26,4 +26,4 @@ CATEGORICAL_FEATURES = ['Education', 'EmploymentType', 'MaritalStatus', 'HasMort
 
 FEATURES_TO_ENCODE = ['Education', 'EmploymentType', 'MaritalStatus', 'HasMortgage', 'HasDependents', 'LoanPurpose', 'HasCoSigner']
 
-FEATURES_TO_DROP = 'LoanID'
+FEATURES_TO_DROP = ['LoanID']

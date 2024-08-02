@@ -13,7 +13,7 @@ def run_training():
     data = load_dataset(file_name=config.TRAIN_DATA)
     print('[INFO] Dataset loaded successfully')
     X_train = data[config.MODEL_FEATURES]
-    y_train = data[config.TARGET]
+    y_train = data[config.TARGET].replace({'No': 0, 'Yes': 1})
     print('[INFO] The dataset has been split into features and target variable successfully')
     pipe.classification_pipeline.fit(X_train, y_train)
     print('[INFO] Model training currently in progress, please be patient')
